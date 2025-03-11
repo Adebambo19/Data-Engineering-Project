@@ -1,7 +1,7 @@
 # Week 3 Project: data-security
 
 ## Problem Statement
-- Describe the problem to be solved here.
+- Encrypt sensitive data in a pipeline. Implement role-based access control (RBAC) for a cloud database
 
 ## Requirements
 1. Requirement 1

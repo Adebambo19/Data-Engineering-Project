@@ -1,7 +1,7 @@
 # Week 1 Project: cloud-pipeline
 
 ## Problem Statement
-- Describe the problem to be solved here.
+- Set up a cloud storage bucket (e.g., AWS S3). Load data into the bucket and use a serverless function (e.g., AWS Lambda) to process the data.
 
 ## Requirements
 1. Requirement 1

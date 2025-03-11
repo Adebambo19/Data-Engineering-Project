@@ -1,7 +1,7 @@
 # Week 4 Project: job-readiness
 
 ## Problem Statement
-- Describe the problem to be solved here.
+- Practice data engineering interview questions (SQL, Python, system design). Build a resume highlighting your projects and skills. Network with data engineers on LinkedIn.
 
 ## Requirements
 1. Requirement 1

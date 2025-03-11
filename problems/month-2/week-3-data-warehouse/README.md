@@ -1,7 +1,7 @@
 # Week 3 Project: data-warehouse
 
 ## Problem Statement
-- Describe the problem to be solved here.
+- Design a star schema for a sample dataset (e.g., sales data). Load data into a cloud data warehouse (e.g., Snowflake, BigQuery) and run analytical queries.
 
 ## Requirements
 1. Requirement 1

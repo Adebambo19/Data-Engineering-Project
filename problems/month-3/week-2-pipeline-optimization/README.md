@@ -1,7 +1,7 @@
 # Week 2 Project: pipeline-optimization
 
 ## Problem Statement
-- Describe the problem to be solved here.
+- Optimize an existing ETL pipeline for performance and cost. Use partitioning, indexing, and caching techniques.
 
 ## Requirements
 1. Requirement 1

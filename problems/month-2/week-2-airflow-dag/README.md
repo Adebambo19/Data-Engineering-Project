@@ -1,7 +1,7 @@
 # Week 2 Project: airflow-dag
 
 ## Problem Statement
-- Describe the problem to be solved here.
+- Build an Airflow DAG to automate the ETL pipeline from Week 3. Schedule the pipeline to run daily.
 
 ## Requirements
 1. Requirement 1

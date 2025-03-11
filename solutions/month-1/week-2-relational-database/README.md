@@ -1,7 +1,7 @@
 # Week 2 Project: relational-database
 
 ## Problem Statement
-- Describe the problem to be solved here.
+- Design a relational database schema for a sample dataset (e.g., e-commerce data). Use Python to load data and perform CRUD operations.
 
 ## Requirements
 1. Requirement 1

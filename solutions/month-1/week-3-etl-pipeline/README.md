@@ -1,7 +1,7 @@
 # Week 3 Project: etl-pipeline
 
 ## Problem Statement
-- Describe the problem to be solved here.
+- Extract data from an API (e.g., weather data), transform it (clean, aggregate), and load it into a database.
 
 ## Requirements
 1. Requirement 1

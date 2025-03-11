@@ -1,7 +1,7 @@
 # Week 3 Project: portfolio-documentation
 
 ## Problem Statement
-- Describe the problem to be solved here.
+- Document all projects with clear READMEs, diagrams, and explanations. Create a GitHub repository to showcase your work. Write blog posts or case studies about your projects.
 
 ## Requirements
 1. Requirement 1

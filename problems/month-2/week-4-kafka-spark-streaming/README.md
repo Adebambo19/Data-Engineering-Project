@@ -1,7 +1,7 @@
 # Week 4 Project: kafka-spark-streaming
 
 ## Problem Statement
-- Describe the problem to be solved here.
+- Use Kafka to stream data (e.g., sensor data). Use Spark Streaming to process and analyze the data in real-time.
 
 ## Requirements
 1. Requirement 1

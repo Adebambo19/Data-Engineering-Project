@@ -1,7 +1,7 @@
 # Week 4 Project: pyspark-processing
 
 ## Problem Statement
-- Describe the problem to be solved here.
+- Use PySpark to process a large dataset (e.g., log files). Perform aggregations and transformations.
 
 ## Requirements
 1. Requirement 1

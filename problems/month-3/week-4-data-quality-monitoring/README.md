@@ -1,7 +1,7 @@
 # Week 4 Project: data-quality-monitoring
 
 ## Problem Statement
-- Describe the problem to be solved here.
+- Implement data quality checks (e.g., null values, duplicates). Set up monitoring and alerts for a data pipeline.
 
 ## Requirements
 1. Requirement 1

@@ -1,7 +1,7 @@
 # Week 2 Project: real-time-analytics
 
 ## Problem Statement
-- Describe the problem to be solved here.
+- Build a real-time analytics system: use Kafka to stream data, Spark Streaming to process the data, and store results in a database for real-time visualization.
 
 ## Requirements
 1. Requirement 1
