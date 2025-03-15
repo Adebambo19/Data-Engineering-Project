@@ -1,11 +1,29 @@
 import pandas as pd
 import duckdb
 
-# Load data
-data = pd.read_csv("data/kafka-spark-streaming.csv")
+# produce_to_kafka, consume_from_kafka, process_with_spark, load_to_duckdb, query_duckdb
 
-# Process data
-# Add your code here
+def produce_to_kafka():
+    # Your code goes here
+    pass
 
-# Save results
-data.to_csv("data/processed_kafka-spark-streaming.csv", index=False)
+
+def consume_from_kafka():
+    # Your code goes here
+    pass
+
+
+def process_with_spark():
+    # Your code goes here
+    pass
+
+
+def load_to_duckdb():
+    # Your code goes here
+    pass
+
+
+def query_duckdb():
+    # Your code goes here
+    pass
+

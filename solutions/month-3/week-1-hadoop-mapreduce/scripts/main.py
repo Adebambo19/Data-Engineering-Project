@@ -1,11 +1,22 @@
 import pandas as pd
 import duckdb
 
-# Load data
-data = pd.read_csv("data/hadoop-mapreduce.csv")
+# run_mapreduce_job, load_to_duckdb, query_duckdb
 
-# Process data
-# Add your code here
 
-# Save results
-data.to_csv("data/processed_hadoop-mapreduce.csv", index=False)
+def run_mapreduce_job():
+
+    # Your code goes here
+    pass
+
+
+def load_to_duckdb():
+
+    # Your code goes here
+    pass
+
+
+def query_duckdb():
+
+    # Your code goes here
+    pass

@@ -1,11 +1,34 @@
 import pandas as pd
 import duckdb
 
-# Load data
-data = pd.read_csv("data/data-security.csv")
+# encrypt_data, decrypt_data, load_to_duckdb, query_duckdb, check_access
 
-# Process data
-# Add your code here
 
-# Save results
-data.to_csv("data/processed_data-security.csv", index=False)
+def encrypt_data():
+
+    # your code goes here
+    pass
+
+
+def decrypt_data():
+
+    # your code goes here
+    pass
+
+
+def load_to_duckdb():
+
+    # your code goes here
+    pass
+
+
+def query_duckdb():
+
+    # your code goes here
+    pass
+
+
+def check_access():
+
+    # your code goes here
+    pass

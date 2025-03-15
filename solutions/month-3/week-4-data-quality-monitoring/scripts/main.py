@@ -1,11 +1,29 @@
 import pandas as pd
 import duckdb
 
-# Load data
-data = pd.read_csv("data/data-quality-monitoring.csv")
+# check_null_values, check_duplicates, load_to_duckdb, query_duckdb, send_alert
 
-# Process data
-# Add your code here
 
-# Save results
-data.to_csv("data/processed_data-quality-monitoring.csv", index=False)
+def check_null_values():
+    # Your code goes here
+    pass
+
+
+def check_duplicates():
+    # Your code goes here
+    pass
+
+
+def load_to_duckdb():
+    # Your code goes here
+    pass
+
+
+def query_duckdb():
+    # Your code goes here
+    pass
+
+
+def send_alert():
+    # Your code goes here
+    pass

@@ -1,11 +1,25 @@
 import pandas as pd
 import duckdb
 
-# Load data
-data = pd.read_csv("data/data-warehouse.csv")
+# load_data, transform_data, create_star_schema, run_analytical_query
 
-# Process data
-# Add your code here
+def load_data():
+    # write your code here
+    pass
 
-# Save results
-data.to_csv("data/processed_data-warehouse.csv", index=False)
+
+def transform_data():
+    # write your code here
+    pass
+
+
+def create_star_schema():
+    # write your code here
+    pass
+
+
+def run_analytical_query():
+    # write your code here
+    pass
+
+

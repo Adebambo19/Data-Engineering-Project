@@ -1,11 +1,23 @@
 import pandas as pd
 import duckdb
 
-# Load data
-data = pd.read_csv("data/airflow-dag.csv")
+# extract_data, transform_data, load_to_duckdb, query_duckdb
 
-# Process data
-# Add your code here
+def extract_data():
+    # write your code here
+    pass
 
-# Save results
-data.to_csv("data/processed_airflow-dag.csv", index=False)
+
+def transform_data():
+    # write your code here
+    pass
+
+
+def load_to_duckdb():
+    # write your code here
+    pass
+
+
+def query_duckdb():
+    # write your code here
+    pass

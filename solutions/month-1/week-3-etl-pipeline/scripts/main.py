@@ -1,11 +1,19 @@
 import pandas as pd
 import duckdb
 
+# Extract data
+def extract_data():
+    # write your code here
+    pass
+
 # Load data
-data = pd.read_csv("data/etl-pipeline.csv")
+def load_data():
+    # write your code here
+    pass
 
-# Process data
-# Add your code here
+# Transform data
+def transform_data():
+    # write your code here
+    pass
 
-# Save results
-data.to_csv("data/processed_etl-pipeline.csv", index=False)
+

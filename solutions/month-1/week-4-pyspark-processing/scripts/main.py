@@ -1,11 +1,27 @@
 import pandas as pd
 import duckdb
 
-# Load data
-data = pd.read_csv("data/pyspark-processing.csv")
+# load_data, process_data, save_to_duckdb, query_data
 
-# Process data
-# Add your code here
+# Load Data
+def load_data():
+    # Write your code here
+    pass
 
-# Save results
-data.to_csv("data/processed_pyspark-processing.csv", index=False)
+
+# Process Data
+def process_data():
+    # Write your code here
+    pass
+
+
+# Save to Database
+def save_to_duckdb():
+    # Write your code here
+    pass
+
+
+# Query Data
+def query_data():
+    # Write your code here
+    pass

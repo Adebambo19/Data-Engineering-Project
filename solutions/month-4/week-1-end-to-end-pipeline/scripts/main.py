@@ -1,11 +1,24 @@
 import pandas as pd
 import duckdb
 
-# Load data
-data = pd.read_csv("data/end-to-end-pipeline.csv")
+# ingest_data, process_data, load_to_duckdb, query_duckdb
 
-# Process data
-# Add your code here
 
-# Save results
-data.to_csv("data/processed_end-to-end-pipeline.csv", index=False)
+def ingest_data():
+    # Your code goes here
+    pass
+
+
+def process_data():
+    # Your code goes here
+    pass
+
+
+def load_to_duckdb():
+    # Your code goes here
+    pass
+
+
+def query_duckdb():
+    # Your code goes here
+    pass

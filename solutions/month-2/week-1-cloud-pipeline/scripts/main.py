@@ -1,11 +1,30 @@
 import pandas as pd
 import duckdb
 
-# Load data
-data = pd.read_csv("data/cloud-pipeline.csv")
 
-# Process data
-# Add your code here
+# download_from_s3, process_data, upload_to_s3, load_to_duckdb, query_duckdb
+def download_from_s3():
+    # write your code here
+    pass
 
-# Save results
-data.to_csv("data/processed_cloud-pipeline.csv", index=False)
+
+def process_data():
+    # write your code here
+    pass
+
+
+def upload_to_s3():
+    # write your code here
+    pass
+
+
+def load_to_duckdb():
+    # write your code here
+    pass
+
+
+def query_duckdb():
+    # write your code here
+    pass
+
+

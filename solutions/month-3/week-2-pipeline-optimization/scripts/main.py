@@ -1,11 +1,24 @@
 import pandas as pd
 import duckdb
 
-# Load data
-data = pd.read_csv("data/pipeline-optimization.csv")
+# extract_data, transform_data, load_to_duckdb, query_duckdb
 
-# Process data
-# Add your code here
 
-# Save results
-data.to_csv("data/processed_pipeline-optimization.csv", index=False)
+def extract_data():
+    # Your code goes here
+    pass
+
+
+def transform_data():
+    # Your code goes here
+    pass
+
+
+def load_to_duckdb():
+    # Your code goes here
+    pass
+
+
+def query_duckdb():
+    # Your code goes here
+    pass
