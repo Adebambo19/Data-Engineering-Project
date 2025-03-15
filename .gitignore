@@ -1,1 +1,4 @@
 data-engineering-projects/
+**/venv
+**/__pycache__
+**/.pytest_cache
