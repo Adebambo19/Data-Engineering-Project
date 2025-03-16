@@ -9,7 +9,7 @@ from scripts.main import extract_data, transform_data, load_data
 def api_config():
     return {
         "url": "https://api.openweathermap.org/data/2.5/weather",
-        "api_key": "your_api_key_here",  # Replace with your actual API key
+        "api_key": "da3ec86825cb6c36e7fd77b24bf962ec",  # Replace with your actual API key
         "city": "London"
     }
 
