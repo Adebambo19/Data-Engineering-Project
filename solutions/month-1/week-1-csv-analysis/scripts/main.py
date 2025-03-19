@@ -1,59 +1,45 @@
+import os
 import pandas as pd
 import duckdb
-import kagglehub
-import os 
-import shutil
-
-
 
 def load_data():
-    # kagglehub authentication
-    # download data into the data folder
-    # create a copy of the train.csv to 
-    data = kagglehub.competition_download("titanic")
-    shutil.move(src=data, dst="./data")
+    """
+    Load data from the 'data' folder.
+    Assumes the data folder contains a file named 'week-1-project.csv'.
+    """
+    data_folder = "data"
+    if not os.path.exists(data_folder):
+        os.makedirs(data_folder)
+    
+    # Check if the file exists
+    csv_file_path = os.path.join(data_folder, "week-1-project.csv")
+    if not os.path.exists(csv_file_path):
+        raise FileNotFoundError(f"File '{csv_file_path}' not found in the data folder.")
+    
+    # Load the CSV file into a Pandas DataFrame
+    df = pd.read_csv(csv_file_path)
+    return df
 
 
-    shutil.rmtree("./data/titanic")
+def process_data(csv_file_path):
+    """
+    Process the data from the CSV file.
+    Returns:
+        - mean_age: The mean age of the dataset.
+        - gender_stats: A list of tuples containing gender counts, e.g., [("Male", 10), ("Female", 15)].
+        - most_purchased_ticket: The most purchased ticket type.
+    """
+    # Load the data into a Pandas DataFrame
+    df = pd.read_csv(csv_file_path)
 
-    # check if week-1-project.csv doesnot exist, then create it else: 
-    if os.path.exists("./data/week-1-project.csv"):
-        pass
-    else: 
-        shutil.copy(src="./data/train.csv", dst="./data/week-1-project.csv")
-    return "./data/week-1-project.csv"
+    # 1. Calculate mean age
+    mean_age = df["age"].mean()
 
+    # 2. Calculate gender statistics
+    gender_stats = df["gender"].value_counts().items()
+    gender_stats = [(gender, count) for gender, count in gender_stats]
 
-def process_data(data):
-    # 2. Get the mean age of the passenger and also get the number of each gender on board 
-    # 3. Get the 2nd highest purchases ticket
+    # 3. Find the most purchased ticket type
+    most_purchased_ticket = df["ticket_type"].mode()[0]
 
-
-    relation = duckdb.read_csv(data)
-
-    # Calculate mean age
-    mean_age = duckdb.sql("SELECT avg(age) FROM relation").fetchone()[0]
-
-    # Calculate gender statistics
-    gender_stats = duckdb.sql("SELECT Sex, COUNT(*) as count FROM relation GROUP BY Sex").fetchall()
-
-    # Find the second most purchased ticket
-    second_ticket = duckdb.sql("""
-        SELECT Ticket
-        FROM (
-            SELECT Ticket, COUNT(*) as count,
-                   ROW_NUMBER() OVER (ORDER BY COUNT(*) DESC) as rank
-            FROM relation
-            GROUP BY Ticket
-        )
-        WHERE rank = 2
-    """).fetchone()[0]
-
-    return mean_age, gender_stats, second_ticket
-
-
-print(process_data(load_data()))
-
-
-
-
+    return mean_age, gender_stats, most_purchased_ticket
