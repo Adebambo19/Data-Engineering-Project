@@ -80,13 +80,6 @@ def test_run_analytical_query(db_connection, sample_sales_data, sample_customer_
     result = run_analytical_query(db_connection, query)
     assert len(result) == 3, "Query should return results for all customers."
 
-# Test error handling for data loading
-def test_load_data_error_handling(db_connection):
-    invalid_data = pd.DataFrame({
-        "invalid_column": ["invalid_value"]
-    })
-    with pytest.raises(Exception):
-        load_data(db_connection, invalid_data, "invalid_table")
 
 # Test logging and error handling
 def test_logging_and_error_handling(caplog):

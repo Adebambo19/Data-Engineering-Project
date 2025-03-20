@@ -1,14 +1,14 @@
-from .customer import Customer
-from .product import Product
-from typing import List
 class Order:
-    def __init__(self, id: int, customer: Customer, products: List[Product]):
+    def __init__(self, id, customer, products):
         self.id = id
         self.customer = customer
         self.products = products
-    def update (self, products):
-        self.products.append(products)
-    def delete (self):
-        self.customer = None
-        self.products = None
+
+    def update(self, products=None):
+        if products:
+            self.products = products
+
+    def delete(self):
         self.id = None
+        self.customer = None
+        self.products = []

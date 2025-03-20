@@ -2,6 +2,7 @@ import pytest
 import duckdb
 import pandas as pd
 from scripts.main import ingest_data, process_data, load_to_duckdb, query_duckdb
+import requests
 
 # Fixture for DuckDB connection
 @pytest.fixture
@@ -13,12 +14,12 @@ def db_connection():
 # Fixture for sample CSV data
 @pytest.fixture
 def sample_csv_data():
-    return "tests/sample_data.csv"
+    return "data/sample_data.csv"
 
 # Fixture for sample API data
 @pytest.fixture
 def sample_api_data():
-    return "https://api.example.com/data"
+    return requests.get("https://api.bittrex.com/v3/markets").json()
 
 # Test data ingestion from CSV
 def test_ingest_csv_data(sample_csv_data):

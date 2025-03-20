@@ -34,9 +34,14 @@ def sample_log_data(spark_session):
     columns = ["timestamp", "user", "action", "status"]
     return spark_session.createDataFrame(data, columns)
 
-# Test data loading with PySpark
-def test_load_data(spark_session):
-    data = load_data(spark_session, "tests/sample_logs.csv")
+# Fixture for file location
+@pytest.fixture
+def file_location():
+    return "data/sample_logs.csv"  # Replace with the actual path to your sample data file
+
+# Test data loading with PySpark from remote or local file location
+def test_load_data(spark_session, file_location):
+    data = load_data(spark_session, file_location)
     assert data.count() > 0, "Data should be loaded into a PySpark DataFrame."
 
 # Test data processing with PySpark
@@ -68,7 +73,7 @@ def test_query_data(db_connection, sample_log_data):
 # Test error handling for data processing
 def test_process_data_error_handling(spark_session):
     # Test invalid data format
-    invalid_data = spark_session.createDataFrame([], ["invalid_column"])
+    invalid_data = spark_session.createDataFrame([("invalid_value",)], ["invalid_column"])
     with pytest.raises(Exception):
         process_data(invalid_data)
 

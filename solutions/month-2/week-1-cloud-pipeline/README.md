@@ -46,3 +46,8 @@
    ```bash
    pip install boto3 duckdb pytest
    ```
+1. **Export your AWS credentials**:
+   ```bash
+   export AWS_ACCESS_KEY_ID="<your AWS access key>"
+   export AWS_SECRET_ACCESS_KEY="<your AWS secret key>"
+   ```

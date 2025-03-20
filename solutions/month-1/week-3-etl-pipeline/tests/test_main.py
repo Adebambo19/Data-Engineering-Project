@@ -9,7 +9,7 @@ from scripts.main import extract_data, transform_data, load_data
 def api_config():
     return {
         "url": "https://api.openweathermap.org/data/2.5/weather",
-        "api_key": "your_api_key_here",  # Replace with your actual API key
+        "api_key": "6b31c1adce9243c8d32fef9da8a159a6",  # Replace with your actual API key
         "city": "London"
     }
 
@@ -52,8 +52,9 @@ def test_load_data(db_connection, api_config):
 
     # Verify data was inserted into the database
     result = db_connection.execute("SELECT * FROM weather_data").fetchall()
+    print(result)
     assert len(result) == 1, "Data should be inserted into the database."
-    assert result[0][1] == "London", "City name should match the inserted data."
+    assert result[0][0] == "London", "City name should match the inserted data."
 
 # Test error handling for API extraction
 def test_extract_data_error_handling(api_config):

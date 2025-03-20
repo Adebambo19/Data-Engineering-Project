@@ -21,7 +21,7 @@ def sample_data():
 
 # Test data extraction
 def test_extract_data():
-    data = extract_data("tests/sample_data.csv")
+    data = extract_data("data/sample_data.csv")
     assert isinstance(data, pd.DataFrame), "Extracted data should be a DataFrame."
     assert not data.empty, "Extracted data should not be empty."
 

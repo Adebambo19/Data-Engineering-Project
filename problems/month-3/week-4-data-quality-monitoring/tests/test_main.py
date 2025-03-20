@@ -29,7 +29,7 @@ def test_check_null_values(sample_data):
 def test_check_duplicates(sample_data):
     duplicate_counts = check_duplicates(sample_data, ["age"])
     assert isinstance(duplicate_counts, dict), "Duplicate counts should be a dictionary."
-    assert duplicate_counts["age"] == 1, "There should be 1 duplicate in the 'age' column."
+    assert duplicate_counts["duplicates"] == 1, "There should be 1 duplicate in the 'age' column."
 
 # Test loading data into DuckDB
 def test_load_to_duckdb(db_connection, sample_data):

@@ -22,13 +22,13 @@ def sample_data():
 
 # Test Airflow DAG loading
 def test_dag_loading():
-    dag_bag = DagBag()
+    dag_bag = DagBag(dag_folder="dags/", include_examples=False)
     assert len(dag_bag.dags) > 0, "No DAGs were loaded."
     assert "etl_pipeline_dag" in dag_bag.dags, "ETL Pipeline DAG should be loaded."
 
 # Test data extraction
 def test_extract_data():
-    data = extract_data("tests/sample_data.csv")
+    data = extract_data("data/sample_data.csv")
     assert isinstance(data, pd.DataFrame), "Extracted data should be a DataFrame."
     assert not data.empty, "Extracted data should not be empty."
 

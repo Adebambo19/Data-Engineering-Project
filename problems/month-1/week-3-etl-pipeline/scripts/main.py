@@ -1,30 +1,26 @@
 import requests
 import pandas as pd
 import duckdb
-api_config = {'api_key': 'da3ec86825cb6c36e7fd77b24bf962ec', 'city': 'London', 'url': 'https://api.openweathermap.org/data/2.5/weather'}
-def db_connection():
-    conn = duckdb.connect(":memory:")  # Use an in-memory DuckDB database for testing
-    yield conn
-    conn.close()
+import logging
 
-# Extract data
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 def extract_data(url, api_key, city):
-    # write your code here
-    url = api_config["url"]
-    api_key = api_config['api_key']
-    city = api_config['city']
-    data = requests.get(url = url, params = city, headers = api_key,)   
-    
-
-# Load data
-def load_data():
-
-    # write your code here
+    """
+    Extract weather data from the OpenWeatherMap API.
+    """
     pass
 
-# Transform data
-def transform_data():
-    # write your code here
+def transform_data(data):
+    """
+    Transform the extracted weather data into a structured format.
+    """
     pass
 
-
+def load_data(db_connection, data):
+    """
+    Load the transformed data into a DuckDB database.
+    """
+    pass
